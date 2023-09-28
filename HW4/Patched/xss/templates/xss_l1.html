@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Template</title>
+</head>
+<body>
+    {% autoescape off %}
+    <h1>Hello, {{ name | escape }}!</h1>
+    {% endautoescape %}
+    <form method="POST" action="" >
+        {% csrf_token %}
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" name="name">
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    <a href="{% url 'l2' %}">Next XSS Challenge</a>
+</body>
+</html>

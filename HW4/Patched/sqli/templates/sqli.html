@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Template</title>
+</head>
+<body>
+    <h1>Enter your username and password to log in</h1>
+    <form method="POST" action="" >
+        {% csrf_token %}
+        <label for="username">Enter your username:</label>
+        <input type="text" id="username" name="username">
+        <br>
+        <label for="password">Enter your password:</label>
+        <input type="password" id="password" name="password">
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    {% if results %}
+    <p>Login Successful</p>
+    {% else %}
+    <p>Try again</p>
+    {% endif %}
+</body>
+</html>
